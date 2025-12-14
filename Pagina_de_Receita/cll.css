@@ -2,16 +2,19 @@
 @media screen and (max-width:600px){
     body{
         margin: 0px;
+        overflow-x: hidden;
     }
     #tudo{
         width: 100vw;
         height: 100%;
         border-radius: 0px;
         margin: 0%;
+        box-sizing: border-box;
+        padding: 40px;
     }
     #img{
         background-color: white;
-        width: 117vw;
+        width: 100vw;
         padding: 0px;
     }
     #img>img{
