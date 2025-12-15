@@ -1,0 +1,79 @@
+@charset 'utf-8';
+@font-face {
+    font-family: 'inter';
+    src: url(assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+}
+:root{
+    --Green: hsl(75, 94%, 57%);
+    --White: hsl(0, 0%, 100%);
+    --Grey700: hsl(0, 0%, 20%);
+    --Grey800: hsl(0, 0%, 12%);
+    --Grey900: hsl(0, 0%, 8%);
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: var(--Grey900);
+}
+main{
+    margin: 2% auto 0px;
+    width: 22%;
+    padding: 25px 30px;
+    border-radius: 10px;
+    background-color: var(--Grey800);
+}
+
+#perfil{
+    width: 100px;
+    margin: auto;
+}
+#perfil>img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+#section1{
+    margin: 10px 0px 20px 0px;
+    text-align: center;
+    font-family: 'inter';
+}
+
+#section1 h1{
+    color: var(--White);
+    font-weight: 700;
+
+}
+#section1 h3{
+    color: var(--Green);
+    margin: 10px 0px;
+    font-size: medium;
+}
+#section1>p{
+    color: white;
+    font-size: 1em;
+    font-weight: 200;
+}
+
+#section2{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+}
+#section2>a{
+    text-decoration: none;
+    color: var(--White);
+    margin: 10px 0px;
+    background-color: var(--Grey700);
+    padding: 12px;
+    border-radius: 10px;
+}
+
+#section2>a:hover{
+    background-color: var(--Green);
+    color: black;
+    transition: 0.5s;
+}
