@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3-column preview card component</title>
+  <style>
+
+    :root{
+      --Gold500: hsl(31, 77%, 52%);
+      --Cyan800: hsl(184, 100%, 22%);
+      --Green950: hsl(179, 100%, 13%);
+      --Transparentwhite: hsl(0, 100%, 0.75);
+      --Gray100: hsl(0, 0%, 95%);
+    }
+
+    *{
+      box-sizing: border-box;
+      padding: 0px;
+      margin: 0px;
+    }
+
+    body{
+      height: 100vh;
+      display: flex;
+      align-content: center;
+      justify-content:center ;
+      background-color: var(--Gray100);
+    }
+
+    main{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      overflow: hidden;
+      border-radius: 10px;
+    }
+    .colunageral{
+      color: white;
+      padding: 30px;
+      text-align: start;
+      width: 200px;
+      height: 364px;
+      display: flex;
+      flex-flow: column;
+      justify-content: space-between;
+    }
+    .colunageral>img{
+      width: 50px;
+    }
+    .colunageral>h1{
+      margin: 15px 0px;
+      font-size: x-large;
+    }
+    .colunageral>button{
+      padding: 10px;
+      border: none;
+      border-radius: 20px;
+      margin: 30px 0px 0px 0px;
+    }
+    .colunageral>button:hover{
+      border: 2px solid var(--Gray100);
+      padding: 8px;
+      cursor: pointer;
+      background-color: transparent;
+      color: white;
+    }
+
+    #coluna1{
+      background-color: var(--Gold500);
+    }
+    #coluna2{
+      background-color: var(--Cyan800);
+    }
+    #coluna3{
+      background-color: var(--Green950);
+    }
+
+    @media screen and (orientation: portrait) {
+      body{
+        height: 100%;
+      }
+      main{
+        flex-flow: column;
+        width: 50%;
+        margin: 20px 0px;
+      }
+      .colunageral{
+        width: 100%;
+        padding: 40px;
+      }
+
+      .colunageral>h1{
+      margin: 0px 0px;
+    }
+      
+    }
+  </style>
+</head>
+<body>
+  
+  <main>
+    <section id="coluna1" class="colunageral">
+      <img src="images/icon-sedans.svg" alt="Sedans">
+      <h1>SEDANS</h1>
+      <p>
+        Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city
+        or on your next road trip.
+      </p>
+      <button>Learn More</button>
+    </section>
+
+    <section id="coluna2" class="colunageral">
+      <img src="images/icon-suvs.svg" alt="SUVs">
+      <h1>SUVS</h1>
+      <p>
+        Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation
+        and off-road adventures.
+      </p>
+      <button>Learn More</button>
+    </section>
+
+    <section id="coluna3" class="colunageral">
+      <img src="images/icon-luxury.svg" alt="Luxury">
+      <h1>LUXURY</h1>
+      <p>
+        Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury
+        rental and arrive in style.
+      </p>
+      <button>Learn More</button>
+    </section>
+  </main>
+
+</body>
+</html>

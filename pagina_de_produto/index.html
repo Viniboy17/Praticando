@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product preview card component</title>
+
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+    @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+    :root{
+      --Green500: hsl(158, 36%, 37%);
+      --Green700: hsl(158, 42%, 18%);
+      --Black: hsl(212, 21%, 14%);
+      --Grey: hsl(228, 12%, 48%);
+      --Cream: hsl(30, 38%, 92%);
+      --White: hsl(0, 0%, 100%);
+    }
+
+
+    *{
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+
+    body{
+      display: flex;
+      justify-content: center; 
+      align-items: center; 
+      height: 100vh;
+
+      background-color: var(--Cream);
+    }
+
+    main{
+      display: flex;
+      flex-flow: row wrap;
+      border-radius: 5px;
+      overflow: hidden;
+      background-color: var(--White);
+    }
+
+    #imagem{
+      width: 250px;
+      height: 370px;
+      background-image: url(images/image-product-desktop.jpg);   
+      background-position: center center;
+      background-size: cover;
+     }
+     #imagem>img{
+      display: none;
+     }
+
+     #conteudo{
+      width: 250px;
+      height: 370px;
+      padding: 20px;
+     }
+
+     h3{
+      font-family: "Montserrat", sans-serif;
+      font-weight: 500;
+      font-size: small;
+      color: var(--Grey);
+     }
+
+     h1{
+      font-family: "Fraunces";
+      font-weight: 700;
+      line-height: 0.9em;
+      margin: 15px 0px 20px 0px;
+     }
+
+     p{
+      font-family: "Montserrat", sans-serif;
+      color: var(--Grey);
+      line-height: 1.3em;
+      font-size: 0.9em;
+     }
+
+     #preco{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 85%;
+      margin: 20px 0px;
+     }
+     #preco>h2{
+      font-family: "Fraunces";
+      font-size: xx-large;
+      color: var(--Green500);
+     }
+
+     button{
+      width: 100%;
+      height: 35px;
+      text-decoration: none;
+      background-color: var(--Green500);
+      border: none;
+      border-radius: 7px;
+      color: white;
+     }
+     button:hover{
+      background-color: var(--Green700);
+      cursor: pointer;
+     }
+
+     @media screen and (orientation: portrait) {
+      body{
+        height: 100%;
+      }
+      main{
+        flex-flow: column nowrap;
+        width: 80%;
+        height: 90%;
+        border-radius: 20px;
+        margin: 20px 0px;
+      }
+
+     #imagem{
+      width: 100%;
+      height: 260px;
+     }
+      #imagem>img{
+        height: 100%;
+        width: 100%;
+      }
+      #conteudo{
+        width: 100%;
+        height: 100%;
+        padding: 30px;
+        font-size: 1.5em;
+      }
+     }
+  </style>
+
+  
+</head>
+<body>
+
+
+  <main>
+    <section id="imagem"><img src="images/image-product-mobile.jpg" alt=""></section>
+    <section id="conteudo">
+      <h3>PERFUME</h3>
+      <h1>Gabrielle Essence Eau De Parfum</h1>
+      <p>
+        A floral, solar and voluptuous interpretation composed by Olivier Polge,
+        Perfumer-Creator for the House of CHANEL.
+      </p>
+      <div id="preco">
+        <h2>$149.99</h2>
+        <p style="text-decoration: line-through;">$169.99</p>
+      </div>
+      <button>Add to Cart</button>
+    </section>
+  </main>
+  
+</body>
+</html>
